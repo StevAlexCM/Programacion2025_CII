@@ -1,19 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTituloFalta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DE LA FALTA"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+
+        <EditText
+            android:id="@+id/etCodigoPenal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código Penal"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLASIFICACIÓN"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbTransito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tránsito"/>
+
+        <CheckBox
+            android:id="@+id/cbTransporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transporte"/>
+
+        <CheckBox
+            android:id="@+id/cbCarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carga"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selecciona la fecha"
+            android:focusable="false"
+            android:inputType="date"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:layout_marginBottom="16dp"
+            android:is24HourView="false"/>
+
+        <EditText
+            android:id="@+id/etLugarInfraccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lugar de Infracción"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Observaciones"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+</ScrollView>
